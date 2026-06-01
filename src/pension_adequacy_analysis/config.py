@@ -41,9 +41,12 @@ POVERTY_BY_COUNTRY_DATA = BLD_FIGURES / "poverty_by_country.csv"
 PENSION_BY_COUNTRY_DATA = BLD_FIGURES / "pension_by_country.csv"
 PENSION_VS_POVERTY_DATA = BLD_FIGURES / "pension_vs_poverty.csv"
 REGRESSION_RESULTS = BLD_TABLES / "regression_results.csv"
+TABLE_DESCRIPTIVE_STATS_TEX = BLD_TABLES / "descriptive_stats.tex"
+TABLE_REGRESSION_RESULTS_TEX = BLD_TABLES / "regression_results.tex"
 FIG_POVERTY_BY_COUNTRY = BLD_FIGURES / "elderly_poverty_by_country.png"
 FIG_PENSION_BY_COUNTRY = BLD_FIGURES / "pension_replacement_by_country.png"
 FIG_PENSION_VS_POVERTY = BLD_FIGURES / "pension_vs_poverty_scatter.png"
+
 
 # Plot styling
 COLOR_PRIMARY = "#2C6E9E"
