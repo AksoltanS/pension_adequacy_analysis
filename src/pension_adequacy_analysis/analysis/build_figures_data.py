@@ -6,29 +6,27 @@ import statsmodels.api as sm
 
 def build_poverty_by_country(df: pd.DataFrame) -> pd.DataFrame:
     """Build data for the elderly poverty by country figure."""
-    poverty_by_country = (
+    return (
         df[["country", "country_code", "elderly_poverty_rate"]]
-        .drop_duplicates()
+        .drop_duplicates(subset=["country_code"])
         .sort_values("elderly_poverty_rate", ascending=False)
         .reset_index(drop=True)
     )
-    return poverty_by_country
 
 
 def build_pension_by_country(df: pd.DataFrame) -> pd.DataFrame:
     """Build data for the pension replacement rate by country figure."""
-    pension_by_country = (
+    return (
         df[["country", "country_code", "pension_replacement_rate"]]
-        .drop_duplicates()
+        .drop_duplicates(subset=["country_code"])  # ← add subset
         .sort_values("pension_replacement_rate", ascending=True)
         .reset_index(drop=True)
     )
-    return pension_by_country
 
 
 def build_pension_vs_poverty(df: pd.DataFrame) -> pd.DataFrame:
     """Build data for the pension vs poverty scatter plot."""
-    pension_vs_poverty = (
+    return (
         df[
             [
                 "country",
@@ -38,11 +36,9 @@ def build_pension_vs_poverty(df: pd.DataFrame) -> pd.DataFrame:
                 "gdp_per_capita",
             ]
         ]
-        .drop_duplicates()
+        .drop_duplicates(subset=["country_code"])  # ← add subset
         .reset_index(drop=True)
     )
-
-    return pension_vs_poverty
 
 
 def build_regression_results(df: pd.DataFrame) -> pd.DataFrame:
@@ -54,17 +50,17 @@ def build_regression_results(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         DataFrame with regression coefficients, standard errors, and p-values.
     """
-    X = sm.add_constant(df[["pension_replacement_rate", "gdp_per_capita"]])
+    x_mat = sm.add_constant(df[["pension_replacement_rate", "gdp_per_capita"]])
     y = df["elderly_poverty_rate"]
-    model = sm.OLS(y, X).fit()
+    model = sm.OLS(y, x_mat).fit()
 
     return pd.DataFrame(
         {
             "variable": model.params.index,
-            "coefficient": model.params.values,
-            "std_error": model.bse.values,
-            "p_value": model.pvalues.values,
-            "ci_low": model.conf_int()[0].values,
-            "ci_high": model.conf_int()[1].values,
+            "coefficient": model.params.to_numpy(),
+            "std_error": model.bse.to_numpy(),
+            "p_value": model.pvalues.to_numpy(),
+            "ci_low": model.conf_int()[0].to_numpy(),
+            "ci_high": model.conf_int()[1].to_numpy(),
         }
     )
