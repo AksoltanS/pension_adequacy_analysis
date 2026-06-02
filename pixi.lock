@@ -11590,8 +11590,8 @@ packages:
   requires_python: '>=3.8'
 - pypi: ./
   name: pension-adequacy-analysis
-  version: 0.1.dev6+g5833a3bf0.d20260527
-  sha256: 0026252f1ba356bb9797214f7ddf3584526ad0026964b89284d4a69c2c0c02b7
+  version: 0.1.dev8+g20b757c53.d20260602
+  sha256: 9d3fca37d6d8dfb6a9a876e3c2729a4296c830614318539f549a0a63090b5230
   requires_python: '>=3.14,<3.15'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/noarch/pexpect-4.9.0-pyhd8ed1ab_1.conda

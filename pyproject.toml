@@ -21,21 +21,21 @@ classifiers = [
 ]
 dynamic = [ "version" ]
 [[project.authors]]
-name = "JANE DOE"
+name = "AKSOLTAN SEYIDOVA"
 email = "janedoe@example-university.com"
 [project.license]
 text = "MIT"
 [[project.maintainers]]
-name = "JANE DOE"
+name = "AKSOLTAN SEYIDOVA"
 email = "janedoe@example-university.com"
 [project.readme]
 content-type = "text/markdown"
 file = "README.md"
 [project.urls]
-Changelog = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Documentation = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Github = "https://github.com/OpenSourceEconomics/econ-project-templates"
-Tracker = "https://github.com/OpenSourceEconomics/econ-project-templates/issues"
+Changelog = "https://github.com/AksoltanS/pension_adequacy_analysis.git"
+Documentation = "https://github.com/AksoltanS/pension_adequacy_analysis.git"
+Github = "https://github.com/AksoltanS/pension_adequacy_analysis.git"
+Tracker = "https://github.com/AksoltanS/pension_adequacy_analysis.git/issues"
 
 [tool.hatch]
 build.hooks.vcs.version-file = "src/pension_adequacy_analysis/_version.py"

@@ -3,12 +3,12 @@
 version: 1
 project:
   id: template-project
-  title: EXAMPLE PROJECT
+  title: PENSION_ADEQUACY_ANALYSIS
   description: Template for reproducible research projects in economics
   authors:
-    - name: JANE DOE
+    - name: AKSOLTAN SEYIDOVA
       affiliations:
-        - EXAMPLE UNIVERSITY
+        - THE UNIVERSITY OF BONN
       email: janedoe@example-university.com
   keywords:
     - economics

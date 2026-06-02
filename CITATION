@@ -1,6 +1,6 @@
-@Unpublished{DOE2024,
-    Title  = "EXAMPLE PROJECT",
-    Author = "JANE DOE",
+@Unpublished{AKSOLTAN2026,
+    Title  = "PENSION_ADEQUACY_ANALYSIS",
+    Author = "AKSOLTAN SEYIDOVA",
     Year   = "2025",
-    Url    = "https://github.com/opensourceeconomics/econ-project-templates",
+    Url    = "https://github.com/AksoltanS/pension_adequacy_analysis.git",
 }

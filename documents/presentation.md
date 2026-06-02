@@ -5,22 +5,22 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## EXAMPLE PROJECT
+  ## PENSION_ADEQUACY_ANALYSIS
   Academic presentation with Slidev
 drawings:
   persist: false
 transition: fade
-title: EXAMPLE PROJECT
+title: PENSION_ADEQUACY_ANALYSIS
 mdc: true
 defaults:
   layout: center
 ---
 
-# EXAMPLE PROJECT
+# PENSION_ADEQUACY_ANALYSIS
 
-JANE DOE
+AKSOLTAN SEYIDOVA
 
-EXAMPLE UNIVERSITY
+THE UNIVERSITY OF BONN
 
 ---
 

@@ -1,4 +1,4 @@
-# EXAMPLE PROJECT
+# PENSION_ADEQUACY_ANALYSIS
 
 +++ {"part": "abstract"}
 
